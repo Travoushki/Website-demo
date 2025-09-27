@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investment Group</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      z-index: 1000;
+    }
+
+    header .logo {
+      font-size: 28px;
+      font-weight: bold;
+      font-family: serif;
+      color: #d4ad60;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 30px;
+    }
+
+    nav ul li a {
+      color: #000;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #d4ad60;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url("wmremove-transformed.jpeg") no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 50px;
+      position: relative;
+      background-attachment: fixed;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 600px;
+      z-index: 2;
+    }
+
+    @keyframes revolveScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-15deg);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.1) rotate(10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+    .hero-content h1 {
+      font-size: 48px;
+      color: #d4ad60;
+      margin-bottom: 20px;
+      opacity: 0; /* start invisible */
+      animation: revolveScale 1.5s ease-out forwards;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .hero-content .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      font-size: 16px;
+      color: #fff;
+      background: #d4ad60;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .hero-content .btn:hover {
+      background: #d4ad60;
+    }
+    
+    header .logo img {
+  height: 50px; /
+}
+ 
+.empower-section {
+  background-color: #f9f7f4;
+  padding: 80px 50px;
+  color: #000;
+  text-align: center;
+}
+
+.empower-heading {
+  font-size: 22px;
+  font-family: Georgia, serif;
+  margin-bottom: 50px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.empower-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.empower-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.empower-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 450px;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.empower-card h3 {
+  font-size: 20px;
+  font-family: Georgia, serif;
+  margin-bottom: 15px;
+}
+
+.empower-card p {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.empower-btn {
+  display: inline-block;
+  background-color: #d4ad60;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.empower-btn:hover {
+  background-color: #c2984e;
+}
+ 
+.services-section {
+  background-color: #fdfaf6;
+  padding: 80px 50px;
+  color: #000;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.services-image {
+  flex: 1;
+  text-align: center;
+}
+
+.services-image img {
+  max-width: 100%;
+  border-radius: 8px;
+  height: auto;
+}
+
+.services-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.services-content h2 {
+  font-size: 28px;
+  color: #1a1a1a;
+  font-family: Georgia, serif;
+  margin-bottom: 15px;
+}
+
+.services-content p {
+  font-size: 15px;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.services-list {
+  list-style: none;
+  padding: 0;
+}
+
+.services-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #333;
+}
+
+.services-list li img {
+  margin-right: 10px;
+}
+
+
+  </style>
+
+
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+<img src="C:\Users\bouss\OneDrive\Desktop\Images/Group logo.png" alt="Company Logo">
+</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About us</a></li>
+        <li><a href="#services">What we do</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>One Group Diverse Businesses</h1>
+      <p>A values-based, purpose-driven investment group empowering the social and economic development of South Africa and Africa.</p>
+      <a href="#about" class="btn">Get In Touch</a>
+    </div>
+  </section>
+
+<!-- Empowerment Section -->
+<section class="empower-section" id="empower">
+  <div class="empower-container">
+    <h2 class="empower-heading">
+      To empower Africa through sustainable investments
+    </h2>
+    <div class="empower-grid">
+      <!-- Sekunjalo -->
+      <div class="empower-card">
+        <h3>Sekunjalo</h3>
+        <p>
+          Sekunjalo sought to offer “a gentler capitalism” that stressed putting “people before profits”, and investment in skills development especially of black people, as a means of improving the lives of previously disadvantaged South Africans.
+        </p>
+        <a href="https://www.sekunjalo.com/" class="empower-btn" target="_blank">Learn More</a>
+      </div>
+
+      <!-- Survé Philanthropies -->
+      <div class="empower-card">
+        <h3>Survé Philanthropies</h3>
+        <p>
+         Survé Philanthropies is committed to positively impacting disadvantaged communities across South Africa and Africa by supporting initiatives in Arts and Culture, Education, Youth Development, Entrepreneurship, Human Rights, Social Justice, and Environmental Sustainability.
+        </p>
+        <a href="https://survephilanthropies.org/" class="empower-btn" target="_blank">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="services-section" id="services">
+  <div class="services-container">
+    <div class="services-image">
+      <img src="C:\Users\bouss\OneDrive\Desktop\Images/servicesWeb.jpg" alt="services">
+    </div>
+    <div class="services-content">
+      <h2>Our Services</h2>
+      <p>
+Strategic Investment Services Designed for Long-Term Success </p>
+      <ul class="services-list">
+        <li>
+          <img src="C:\Users\bouss\OneDrive\Desktop\Images/Aeei.png" alt="icon">
+          AEEI
+        </li>
+        <li>
+          <img src="C:\Users\bouss\OneDrive\Desktop\Images/media.png" alt="icon">
+         Media and Publishing
+        </li>
+        <li>
+          <img src="C:\Users\bouss\OneDrive\Desktop\Images/E-commerce.png" alt="icon">
+         E-commerce
+        </li>
+        <li>
+          <img src="C:\Users\bouss\OneDrive\Desktop\Images/Private Equity.png" alt="icon">
+        Private Equity
+        </li>
+        <li>
+          <img src="C:\Users\bouss\OneDrive\Desktop\Images/Energy and Power.png" alt="icon">
+        Energy and Power
+        </li>
+        <li>
+          <img src="C:\Users\bouss\OneDrive\Desktop\Images/Telecommunications.png" alt="icon">
+       Telecommunications
+        </li>        
+
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+  <script>
+    // Smooth scroll effect
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
+  </script>
+</body>
+</html>
