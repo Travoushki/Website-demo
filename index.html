@@ -333,6 +333,48 @@
   }
 }
 
+.contact-grid {  padding: 80px 50px;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+}
+
+.contact-info, .contact-form {
+  flex: 1;
+  min-width: 280px;
+  color: #000;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background:#c2984e;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer { background: #111; color: #fff; text-align: center; padding: 20px 0; }
+footer a { color: #fcb900; text-decoration: none; }
+  
   </style>
 
 
@@ -431,7 +473,49 @@ Strategic Investment Services Designed for Long-Term Success </p>
   </div>
 </section>
 
+<section id="contact" class="contact">
+  <div class="container contact-grid">
 
+    <!-- Left Side: Contact Info -->
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <p><strong>Address:</strong><br>
+        Survé Family Office 2nd Floor,<br>
+        Silo 5, V & A Waterfront, Cape Town, 8002</p>
+      <p><strong>Phone:</strong> +27 21 003 8566</p>
+      <p><strong>Email:</strong> <a href="mailto:info@sekunjalo.com">info@sekunjalo.com</a></p>
+      <br>
+      <h3>Office Hours</h3>
+      <p>Monday to Friday<br>8:30 am – 17:00 pm</p>
+      <br>
+      <h3>Follow us online</h3>
+      <a href="#"><img src="icons8-facebook-logo-48.png" alt="Facebook" width="24"></a>
+      <a href="#"><img src="icons8-instagram-logo-48.png" alt="Instagram" width="24"></a>
+       <a href="#"><img src="icons8-twitter-logo-48.png" alt="Facebook" width="24"></a>
+      <a href="#"><img src="icons8-youtube-logo-48.png" alt="Instagram" width="24"></a>
+      <a href="#"><img src="icons8-linkedin-48.png" alt="Instagram" width="24"></a>
+    </div>
+
+    <!-- Right Side: Contact Form -->
+    <div class="contact-form">
+      <h2>Fill The Form</h2>
+      <form action="mailto:info@sekunjalo.com" method="POST" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="Organization" placeholder="Your Organization" required>
+        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+    <div class="container">
+      <p>&copy; 2025 Sekunjalo & Survé Philanthropies. All Rights Reserved.</p>
+    </div>
+  </footer>
 
   <script>
     // Smooth scroll effect
